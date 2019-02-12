@@ -1,13 +1,11 @@
 'use strict'
 
-// var React = require('react')
-
 import React from 'react'
 
-var Title = React.creactClass({
-    render: function () {
-        return <h1>Title</h1>
-    }
+const App = React.creactClass({
+  render: function () {
+    return <h1>Title 2</h1>
+  }
 })
 
-export default Title
+export default App

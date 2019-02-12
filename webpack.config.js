@@ -12,7 +12,7 @@ module.exports = {
         'webpack/hot/only-dev-server',
         path.join(__dirname, 'src', 'index')
     ],
-    
+
     output: {
         path: path.join(__dirname, 'dist'),//diretório fisico
         filename: 'bundle.js',
@@ -24,6 +24,12 @@ module.exports = {
     ],
 
     module: {
+        preLoaders: [{
+            test: /\.js$/,
+            exclude: /node_modules/, //except node_modules folder
+            include: /src/,
+            loader: 'standard-loader'
+        }],
         loaders: [{
             test: /\.js$/, //find js files
             exclude: /node_modules/, //except node_modules folder
