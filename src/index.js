@@ -5,6 +5,6 @@ import { render } from 'react-dom'
 import React from 'react'
 
 render(
-    React.createElement(Title),
+    <Title />,
     document.querySelector('[data-js="app"]')
 )
