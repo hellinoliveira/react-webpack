@@ -8,5 +8,14 @@ module.exports = {
         path: path.join(__dirname, 'dist'),//diretório fisico
         filename: 'bundle.js',
         publicPath: '/static/'//diretório em memória
+    },
+
+    module: {
+        loaders: [{
+            test: /\.js$/, //find js files
+            exclude: /node_modules/, //except node_modules folder
+            include: /src/,
+            loader: 'babel'
+        }]
     }
 }
